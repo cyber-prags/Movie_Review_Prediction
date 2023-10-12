@@ -37,9 +37,13 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 2. **Text Vectorization:** The text data is vectorized using TF-IDF Vectorizer, transforming the review text into numerical features that can be used for machine learning models.
 
 
-# Key Insights
+## Key Insights
 
 Our in-depth Exploratory Data Analysis (EDA) of the dataset has revealed a wealth of fascinating insights, shedding light on various aspects of movie reviews and audience sentiments. These discoveries provide essential context for our movie sentiment prediction project, making it more informative and engaging.
+
+**Data Imbalance:**
+We have an imbalanced dataset in our hands, with a majority of Positive sentimented classes.
+![sentiment imbalance](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/2a40147d-99bd-489e-8278-945146698314)
 
 **1. Distinguished Reviewers:**
    - Among the reviewers, John Luna holds the top position, closely followed by the insightful Bryan Phillips.
@@ -88,11 +92,38 @@ Our in-depth Exploratory Data Analysis (EDA) of the dataset has revealed a wealt
 
 These captivating insights provide the groundwork for our movie review sentiment prediction project. They not only offer valuable context but also fuel our project with meaningful features and trends, promising an engaging journey ahead.
 
+## Feature Selection
+
+Our feature selection process is guided by insights obtained during the Exploratory Data Analysis. We have identified key features that exhibit a strong correlation with movie sentiment. These features will form the basis of our predictive models:
+
+- `reviewText`: The content of the movie reviews.
+- `audienceScore`: The audience scores provided by reviewers.
+- `runtimeMinutes`: The duration of the movie in minutes.
+
+These features were chosen based on their strong positive correlation with movie sentiment.
+
+```python
+X = merged_train_data[['reviewText', 'audienceScore', 'runtimeMinutes']]
+y = merged_train_data['sentiment']
+```
 
 
+## Evaluation metrics:
 
+Since the data is slightly imbalanced; accuracy wouldn't be a good metric to base our evaluation on; so instead we choose the F1-micro score as the evaluation metric to evaluate how well a model performs.
 
+We will also use a combination of PR curves to judge the best performing models.
 
+## Model Selection:
+
+We have opted to test out the following models for our dataset:
+
+1. **LogitsticRegression
+2. NaiveBayes
+3. Stochastic Gradient Descent Regressor (SGD)
+4. SVC
+5. Light Gradient Boosting Model
+6. XGBoost**
 
 
 
