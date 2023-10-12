@@ -116,6 +116,13 @@ In our model evaluation, we recognize the slight class imbalance in our dataset.
 
 In addition to the F1-Micro Score, we will employ `Precision-Recall (PR)` curves to assess and compare the performance of our models.
 
+## Pipelines and Transformers:
+We made use of Pipelines and ColumnTransformers to streamline our task and reduce the code complexity of the notebook.
+
+![pipeline eg](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/700205c4-c16b-44fb-a2f1-c5dd986516dc)
+
+
+
 ## Model Selection
 
 To harness the full potential of our dataset and effectively predict movie sentiment, we have carefully selected a diverse range of machine learning models. Our model selection includes the following six powerful candidates:
@@ -133,29 +140,124 @@ Stay tuned as we delve into the world of machine learning to discover which mode
 
 ## Comparitive Analysis of models:
 
-1. **PR-curves: **
+1. **PR-curves:**
    - **For Training Set:**
+     
      In the cumulative PR-curves below we can see how the various models perform on the test dataset. In a PR curve; a model with a higher Area Under Curve(AUC) is generally deemed to perform better. In the graph below we see that :
+     
      > SVC performs the best with an AUC of 0.98.
+     
      > It is followed by logit(LogisticRegression) and NaiveBayes with 0.95.
+     
      >![PR-train](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/d41b7777-21c5-44f9-b3e8-797e1d1b69bb)
 
 - **For Test Set:**
-     We can see similar observations in the Test set as follows: 
+  
+     We can see similar observations in the Test set as follows:
+  
      > LogisticRegression,SVC and NaiveBayes performs the best with an AUC of 0.92.
+     
      > It is followed by SGD with 0.91.
+     
      >![PR-test](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/cebf8adb-313c-494f-a26a-a306dfa1c8fd)
      
 
 This suggests that for the PR curves; LogisticRegression, SVC and NaiveBayes perform quite well on the dataset.
 
 2. **F1-micro scores:**
-   In the comparitive analysis of the F1-scores; we see that: 
+   
+   In the comparitive analysis of the F1-scores; we see that:
+
+   > SVC has the highest F1-score on the training data; followed by Logistic Regression.
+   
+   > LogisticRegression and SVC has similar f1-micro scores for the test dataset which suggests that these models will perform the best on our dataset as also shown by the PR-curves.
+ 
    ![F1-comparision](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/81d142e2-9fa8-4a5e-9c32-b0c832999deb)
-26a-a306dfa1c8fd)
 
 
+3. To have a look at the other scores like `Accuracy`, `Precision`,`Recall` please do refer the following notebook: https://github.com/cyber-prags/Movie_Review_Prediction/blob/main/Movie_Review_Sentiments_Notebook.ipynb
 
+## Hyper-tuning:
+
+The best performing  models were further hypertuned but they did not show significant improvement in performance and hence the baseline models were chosen for faster convergence of code.
+   
+
+
+# Final Conclusion:
+
+## Model summary without hyper-parameter tuning
+ 
+> In terms of accuracy,the top performing models without hyper-parameter tuning are: **LogisticRegressor,Calibrated LinearSVC with 80%, Complement Naive Bayes** with an accuracy of **79%**
+
+## Model Analysis
+### Logistic Regression (logit):
+
+> **Pros**: Balanced detection of both positive and negative sentiments.
+
+> **Cons:** Potential misclassification may lead to inaccuracies in understanding customer sentiment, affecting decision-making in marketing or product development.
+
+> **Business Implication:** Ideal for a general overview of customer sentiment. Suitable for applications like brand monitoring where both positive and negative sentiments are equally important.
+
+
+### Naive Bayes (nb):
+
+> **Pros**: High detection of negative sentiments (low False Negatives).
+
+> **Cons:** The tendency to miss positive sentiments may lead to underestimation of customer satisfaction, potentially affecting strategies for brand promotion and loyalty programs.
+
+> **Business Implication:** Useful when it's crucial to capture negative feedback, such as in quality control or customer service improvement.
+
+### Stochastic Gradient Descent (sgd):
+
+> **Pros:** Balanced detection of positive and negative sentiments.
+
+> **Cons:** Moderate incorrect classifications could create challenges in precisely targeting customer segments or tailoring personalized marketing strategies.
+
+> **Business Implication:** A versatile option that might require further tuning for specific use cases like targeted marketing or product enhancement.
+
+### LightGBM (lgbm):
+
+> **Pros:** Reasonable detection of positive sentiments.
+
+> **Cons:** The potential misclassification of both positive and negative sentiments might lead to misguided business strategies, such as incorrect product improvements or inefficient allocation of resources.
+
+> **Business Implication:** May need tuning for applications like assessing customer satisfaction or promoting positive reviews.
+
+### Support Vector Classifier (svc):
+
+> **Pros:** Highest detection of positive sentiments.
+
+> **Cons:** Overlooking negative feedback might lead to missed opportunities for addressing customer grievances, potentially harming brand reputation or customer retention.
+
+> **Business Implication:** Suitable for highlighting and leveraging positive feedback, such as in advertising or enhancing positive brand image.
+
+### XGBoost (xgboost):
+
+> **Pros:** Balanced detection of positive and negative sentiments.
+
+> **Cons:** Some misclassifications may reduce the effectiveness of competitive analysis or market segmentation, leading to suboptimal business decisions.
+
+> **Business Implication:** A flexible option that might need more tuning for applications like market segmentation or competitive analysis.
+
+
+#### Decision:
+
+**Best Model:** Both logit and svc are strong candidates.
+
+> If the goal is to obtain a **balanced view of customer sentiments**, <code style="background:red;color:white">logit</code> might be the preferred choice.
+
+> If the focus is on **leveraging positive feedback for marketing or brand enhancement**, <code style="background:red;color:white">svc</code> might be more suitable.
+
+####  Business Considerations:
+    The choice of model should align with the specific goals of the sentiment analysis:
+
+- **Customer Service Improvement:** Focus on models that detect negative sentiments effectively (e.g., nb).
+
+- **Brand Promotion:** Consider models that highlight positive sentiments (e.g., svc).
+
+- **Overall Market Analysis:** Choose a model that provides a balanced view (e.g., logit).
+
+In summary, the selection of the model should be closely tied to the business objectives of the sentiment analysis. Understanding the context, the importance of positive vs. negative sentiments, and the specific use case will guide the final decision. Collaboration with domain experts and further validation can also help in optimizing the model for the desired business outcome.
 
 
 
