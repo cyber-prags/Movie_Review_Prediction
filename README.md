@@ -1,6 +1,6 @@
 # Movie Review Sentiment Prediction
 
-![Movie Review]([link_to_image.jpg](https://nkpremices.com/content/images/2021/08/mih10uhu1464fx1kr0by-1.jpg))
+![Movie Review]![mih10uhu1464fx1kr0by-1](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/75ce6d67-4657-48ba-86b7-e59b6bacade8)
 
 This project aims to predict the sentiment of movie reviews using machine learning models. The dataset consists of movie-title, description, genres, duration, director, actors, users' ratings, review text, reviewer name, and more. We use various machine learning models to analyze and predict the sentiment of movie reviews.
 
@@ -116,140 +116,130 @@ In our model evaluation, we recognize the slight class imbalance in our dataset.
 
 In addition to the F1-Micro Score, we will employ `Precision-Recall (PR)` curves to assess and compare the performance of our models.
 
-## Pipelines and Transformers:
-We made use of Pipelines and ColumnTransformers to streamline our task and reduce the code complexity of the notebook.
+# Pipelines and Transformers
 
-![pipeline eg](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/700205c4-c16b-44fb-a2f1-c5dd986516dc)
+To streamline our workflow and reduce code complexity, we've harnessed the power of Pipelines and ColumnTransformers. These tools enable us to efficiently preprocess data and apply transformations with ease, enhancing the overall efficiency of our project.
 
-
+![Pipeline Example](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/700205c4-c16b-44fb-a2f1-c5dd986516dc)
 
 ## Model Selection
 
-To harness the full potential of our dataset and effectively predict movie sentiment, we have carefully selected a diverse range of machine learning models. Our model selection includes the following six powerful candidates:
+Our journey towards effective sentiment prediction is guided by a carefully curated selection of machine learning models. Our model lineup boasts diversity and includes the following six robust contenders:
 
-1. **Logistic Regression**: A fundamental yet robust linear model, widely used in classification tasks.
-2. **Naive Bayes**: Leveraging probabilistic approaches, Naive Bayes is known for its simplicity and effectiveness in text classification.
-3. **Stochastic Gradient Descent Regressor (SGD)**: A versatile optimization technique that adapts well to various machine learning tasks.
-4. **Support Vector Classifier (SVC)**: Harnessing the power of support vector machines, SVC is a popular choice for binary and multiclass classification.
-5. **Light Gradient Boosting Model**: A highly efficient gradient boosting framework that excels in handling complex datasets.
+1. **Logistic Regression**: A fundamental yet versatile linear model, well-suited for classification tasks.
+2. **Naive Bayes**: Embracing probabilistic approaches for simplicity and efficiency in text classification.
+3. **Stochastic Gradient Descent Regressor (SGD)**: A versatile optimization technique adaptable to various machine learning challenges.
+4. **Support Vector Classifier (SVC)**: Leveraging the power of support vector machines, a popular choice for binary and multiclass classification.
+5. **Light Gradient Boosting Model**: A highly efficient gradient boosting framework, adept at handling complex datasets.
 6. **XGBoost**: A leading gradient boosting algorithm renowned for its performance and scalability in both classification and regression tasks.
 
-Each of these models brings its unique strengths to the table, and we will rigorously evaluate and compare their performance to determine the most effective approach for sentiment prediction.
+These models bring their unique strengths to the table and will undergo rigorous evaluation and comparison to identify the most effective approach for predicting movie sentiment.
 
-Stay tuned as we delve into the world of machine learning to discover which model outshines the rest in our quest to predict movie sentiment with precision and accuracy.
+Stay with us as we delve deeper into the realm of machine learning, and discover which model rises to the challenge of predicting movie sentiment with precision and accuracy.
 
-## Comparitive Analysis of models:
+## Comparative Analysis of Models
 
-1. **PR-curves:**
-   - **For Training Set:**
-     
-     In the cumulative PR-curves below we can see how the various models perform on the test dataset. In a PR curve; a model with a higher Area Under Curve(AUC) is generally deemed to perform better. In the graph below we see that :
-     
-     > SVC performs the best with an AUC of 0.98.
-     
-     > It is followed by logit(LogisticRegression) and NaiveBayes with 0.95.
-     
-     >![PR-train](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/d41b7777-21c5-44f9-b3e8-797e1d1b69bb)
+### PR-Curves
 
-- **For Test Set:**
-  
-     We can see similar observations in the Test set as follows:
-  
-     > LogisticRegression,SVC and NaiveBayes performs the best with an AUC of 0.92.
-     
-     > It is followed by SGD with 0.91.
-     
-     >![PR-test](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/cebf8adb-313c-494f-a26a-a306dfa1c8fd)
-     
+#### For the Training Set
+In the cumulative PR-curves below, we evaluate the performance of our models on the training dataset. The Area Under the Curve (AUC) in a PR curve is a vital metric, with a higher AUC indicating superior model performance. Our observations reveal:
 
-This suggests that for the PR curves; LogisticRegression, SVC and NaiveBayes perform quite well on the dataset.
+- **SVC** leads the way with an AUC of 0.98.
+- It is closely followed by **Logistic Regression** and **Naive Bayes** with an AUC of 0.95.
 
-2. **F1-micro scores:**
-   
-   In the comparitive analysis of the F1-scores; we see that:
+![PR-Curves for Training Set](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/d41b7777-21c5-44f9-b3e8-797e1d1b69bb)
 
-   > SVC has the highest F1-score on the training data; followed by Logistic Regression.
-   
-   > LogisticRegression and SVC has similar f1-micro scores for the test dataset which suggests that these models will perform the best on our dataset as also shown by the PR-curves.
- 
-   ![F1-comparision](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/81d142e2-9fa8-4a5e-9c32-b0c832999deb)
+#### For the Test Set
+We observe similar trends in the test dataset:
 
+- **Logistic Regression**, **SVC**, and **Naive Bayes** excel with an AUC of 0.92.
+- **SGD** follows closely with an AUC of 0.91.
 
-3. To have a look at the other scores like `Accuracy`, `Precision`,`Recall` please do refer the following notebook: https://github.com/cyber-prags/Movie_Review_Prediction/blob/main/Movie_Review_Sentiments_Notebook.ipynb
+![PR-Curves for Test Set](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/cebf8adb-313c-494f-a26a-a306dfa1c8fd)
 
-## Hyper-tuning:
+These insights suggest that for PR curves, **Logistic Regression**, **SVC**, and **Naive Bayes** exhibit strong performance on the dataset.
 
-The best performing  models were further hypertuned but they did not show significant improvement in performance and hence the baseline models were chosen for faster convergence of code.
-   
+### F1-Micro Scores
 
+In the comparative analysis of F1-scores, we observe:
 
-# Final Conclusion:
+- **SVC** achieves the highest F1-score on the training data, closely followed by **Logistic Regression**.
+- On the test dataset, both **Logistic Regression** and **SVC** exhibit similar F1-micro scores, reinforcing their strong performance as indicated by the PR-curves.
 
-## Model summary without hyper-parameter tuning
- 
-> In terms of accuracy,the top performing models without hyper-parameter tuning are: **LogisticRegressor,Calibrated LinearSVC with 80%, Complement Naive Bayes** with an accuracy of **79%**
+![F1-Score Comparison](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/81d142e2-9fa8-4a5e-9c32-b0c832999deb)
+
+For further insights, including accuracy, precision, and recall scores, please refer to our notebook: [Movie_Review_Sentiments_Notebook](https://github.com/cyber-prags/Movie_Review_Prediction/blob/main/Movie_Review_Sentiments_Notebook.ipynb).
+
+## Hyper-Tuning
+
+Our journey to optimize model performance involved hyper-parameter tuning. However, the best-performing models did not exhibit significant improvements through this process. As a result, we opted for baseline models to ensure faster code convergence and maintain efficient results.
+
+# Final Conclusion
+
+## Model Summary without Hyper-Parameter Tuning
+
+In terms of accuracy, our top-performing models without hyper-parameter tuning are **Logistic Regression**, **Calibrated Linear SVC**, and **Complement Naive Bayes**, all achieving an accuracy of 79%.
 
 ## Model Analysis
-### Logistic Regression (logit):
 
-> **Pros**: Balanced detection of both positive and negative sentiments.
+### Logistic Regression (Logit)
 
-> **Cons:** Potential misclassification may lead to inaccuracies in understanding customer sentiment, affecting decision-making in marketing or product development.
+**Pros:** Balances the detection of both positive and negative sentiments.
 
-> **Business Implication:** Ideal for a general overview of customer sentiment. Suitable for applications like brand monitoring where both positive and negative sentiments are equally important.
+**Cons:** Potential misclassification may impact decision-making in marketing or product development.
 
+**Business Implication:** Ideal for obtaining a general overview of customer sentiment. Suitable for applications like brand monitoring, where both positive and negative sentiments are equally important.
 
-### Naive Bayes (nb):
+### Naive Bayes (NB)
 
-> **Pros**: High detection of negative sentiments (low False Negatives).
+**Pros:** High detection of negative sentiments (low False Negatives).
 
-> **Cons:** The tendency to miss positive sentiments may lead to underestimation of customer satisfaction, potentially affecting strategies for brand promotion and loyalty programs.
+**Cons:** The tendency to miss positive sentiments may impact strategies for brand promotion and loyalty programs.
 
-> **Business Implication:** Useful when it's crucial to capture negative feedback, such as in quality control or customer service improvement.
+**Business Implication:** Useful when capturing negative feedback is crucial, such as in quality control or customer service improvement.
 
-### Stochastic Gradient Descent (sgd):
+### Stochastic Gradient Descent (SGD)
 
-> **Pros:** Balanced detection of positive and negative sentiments.
+**Pros:** Balanced detection of positive and negative sentiments.
 
-> **Cons:** Moderate incorrect classifications could create challenges in precisely targeting customer segments or tailoring personalized marketing strategies.
+**Cons:** Moderate incorrect classifications could create challenges in precisely targeting customer segments or tailoring personalized marketing strategies.
 
-> **Business Implication:** A versatile option that might require further tuning for specific use cases like targeted marketing or product enhancement.
+**Business Implication:** A versatile option that might require further tuning for specific use cases, such as targeted marketing or product enhancement.
 
-### LightGBM (lgbm):
+### LightGBM (LGBM)
 
-> **Pros:** Reasonable detection of positive sentiments.
+**Pros:** Reasonable detection of positive sentiments.
 
-> **Cons:** The potential misclassification of both positive and negative sentiments might lead to misguided business strategies, such as incorrect product improvements or inefficient allocation of resources.
+**Cons:** The potential misclassification of both positive and negative sentiments might lead to misguided business strategies, such as incorrect product improvements or inefficient allocation of resources.
 
-> **Business Implication:** May need tuning for applications like assessing customer satisfaction or promoting positive reviews.
+**Business Implication:** May need tuning for applications like assessing customer satisfaction or promoting positive reviews.
 
-### Support Vector Classifier (svc):
+### Support Vector Classifier (SVC)
 
-> **Pros:** Highest detection of positive sentiments.
+**Pros:** Highest detection of positive sentiments.
 
-> **Cons:** Overlooking negative feedback might lead to missed opportunities for addressing customer grievances, potentially harming brand reputation or customer retention.
+**Cons:** Overlooking negative feedback might lead to missed opportunities for addressing customer grievances, potentially harming brand reputation or customer retention.
 
-> **Business Implication:** Suitable for highlighting and leveraging positive feedback, such as in advertising or enhancing positive brand image.
+**Business Implication:** Suitable for highlighting and leveraging positive feedback, such as in advertising or enhancing a positive brand image.
 
-### XGBoost (xgboost):
+### XGBoost (XGBoost)
 
-> **Pros:** Balanced detection of positive and negative sentiments.
+**Pros:** Balanced detection of positive and negative sentiments.
 
-> **Cons:** Some misclassifications may reduce the effectiveness of competitive analysis or market segmentation, leading to suboptimal business decisions.
+**Cons:** Some misclassifications may reduce the effectiveness of competitive analysis or market segmentation, leading to suboptimal business decisions.
 
-> **Business Implication:** A flexible option that might need more tuning for applications like market segmentation or competitive analysis.
+**Business Implication:** A flexible option that might need more tuning for applications like market segmentation or competitive analysis.
 
+#### Decision
 
-#### Decision:
+**Best Model:** Both Logistic Regression and Support Vector Classifier (SVC) exhibit strong performance.
 
-**Best Model:** Both logit and svc are strong candidates.
+- If the goal is to obtain a **balanced view of customer sentiments**, <code style="background:red;color:white">Logistic Regression</code> might be the preferred choice.
 
-> If the goal is to obtain a **balanced view of customer sentiments**, <code style="background:red;color:white">logit</code> might be the preferred choice.
+- If the focus is on **leveraging positive feedback for marketing or brand enhancement**, <code style="background:red;color:white">SVC</code> might be more suitable.
 
-> If the focus is on **leveraging positive feedback for marketing or brand enhancement**, <code style="background:red;color:white">svc</code> might be more suitable.
-
-####  Business Considerations:
-    The choice of model should align with the specific goals of the sentiment analysis:
+**Business Considerations:**
+The choice of model should align with the specific goals of sentiment analysis:
 
 - **Customer Service Improvement:** Focus on models that detect negative sentiments effectively (e.g., nb).
 
@@ -257,34 +247,14 @@ The best performing  models were further hypertuned but they did not show signif
 
 - **Overall Market Analysis:** Choose a model that provides a balanced view (e.g., logit).
 
-In summary, the selection of the model should be closely tied to the business objectives of the sentiment analysis. Understanding the context, the importance of positive vs. negative sentiments, and the specific use case will guide the final decision. Collaboration with domain experts and further validation can also help in optimizing the model for the desired business outcome.
 
+Our journey through the world of sentiment analysis in the realm of movie reviews has led us to a fascinating array of models and performance evaluations. Through PR-curves and F1-micro scores, we've identified standout candidates such as Logistic Regression and Support Vector Classifier. These models exhibit the potential to predict movie sentiment with precision and accuracy, while our business considerations allow us to tailor our choice to the specific objectives of the analysis.
 
+Despite efforts in hyper-parameter tuning, our baseline models stood strong as the top performers, ensuring faster convergence and maintaining efficiency.
 
+Explore the notebook, delve into the models, and uncover the insights that matter most to you.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Thank you for being with me in this journey through data-driven decision-making and the exciting world of movie sentiment prediction.
 
 
 
