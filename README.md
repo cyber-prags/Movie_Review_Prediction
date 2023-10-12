@@ -176,8 +176,6 @@ Our journey to optimize model performance involved hyper-parameter tuning. Howev
 
 # Final Conclusion
 
-## Model Summary without Hyper-Parameter Tuning
-
 In terms of accuracy, our top-performing models without hyper-parameter tuning are **Logistic Regression**, **Calibrated Linear SVC**, and **Complement Naive Bayes**, all achieving an accuracy of 79%.
 
 ## Model Analysis
