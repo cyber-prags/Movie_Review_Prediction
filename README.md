@@ -258,9 +258,9 @@ Thank you for being with me in this journey through data-driven decision-making 
 
 ## Repository Structure
 
-- `/data`: Contains the dataset files (`movies.csv`, `train.csv`, and `test.csv`).
-- `/notebooks`: Jupyter notebooks for data analysis, preprocessing, and model building.
-- `/images`: Image files used in the project description.
+- `/Movie_data`: Contains the dataset files (`movies.csv`, `train.csv`, and `test.csv`).
+- `Movie_Review_Sentiment_Notebook`: Jupyter notebook for data analysis, preprocessing, and model building.
+- `/Images`: Image files used in the project description.
 - `README.md`: This project's main README file, which contains an overview of the project, data, preprocessing, and feature engineering steps.
 
 ## Getting Started
