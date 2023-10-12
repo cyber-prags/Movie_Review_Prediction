@@ -37,34 +37,56 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 2. **Text Vectorization:** The text data is vectorized using TF-IDF Vectorizer, transforming the review text into numerical features that can be used for machine learning models.
 
 
-## Key Insights:
+# Key Insights
 
-1. ![reviewer name](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/120cb58c-3eef-4b50-b986-2ea96e0d8031)
+Our in-depth Exploratory Data Analysis (EDA) of the dataset has revealed a wealth of fascinating insights, shedding light on various aspects of movie reviews and audience sentiments. These discoveries provide essential context for our movie sentiment prediction project, making it more informative and engaging.
 
-2. ![audience score before](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/8719c644-c224-46d1-8db2-3d1ba9e855d3)
+**1. Distinguished Reviewers:**
+   - Among the reviewers, John Luna holds the top position, closely followed by the insightful Bryan Phillips.
 
+   ![Reviewer Ranking](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/120cb58c-3eef-4b50-b986-2ea96e0d8031)
 
-3. ![runtime](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/031831f7-50a5-498b-9245-c044c1a42dc4)
+**2. Audience Score Spectrum:**
+   - The spectrum of audience scores assigned by reviewers spans a wide range, reflecting diverse opinions and tastes.
 
+   ![Audience Score Distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/8719c644-c224-46d1-8db2-3d1ba9e855d3)
 
+**3. Runtime Diversity:**
+   - Our dataset showcases a fascinating diversity in movie runtimes, echoing the broad spectrum of cinematic experiences.
 
-4. ![original lang](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/9d58dbd5-0b20-470f-bafd-54fcee2282cb)
+   ![Runtime Distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/031831f7-50a5-498b-9245-c044c1a42dc4)
 
+**4. Movie Language Mosaic:**
+   - English emerges as the dominant language for the movies, followed by French and British English, forming a rich linguistic tapestry.
 
+   ![Movie Language Distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/9d58dbd5-0b20-470f-bafd-54fcee2282cb)
 
-5.![genre distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/58ff9ff1-c479-4c46-bb98-3edfc0322c6b)
+**5. Genre Galore:**
+   - The cinematic landscape is dominated by Drama, closely accompanied by the genres of Comedy and Documentary, offering a captivating blend of storytelling.
 
+   ![Genre Distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/58ff9ff1-c479-4c46-bb98-3edfc0322c6b)
 
-6. ![release date streams](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/6337a6d3-c0d3-4b87-b199-baf314d48d89)
+**6. Remarkable Release Dates:**
+   - The cinematic calendar highlights that May 22, 2017, was a momentous day with the release of an impressive 653 movies, closely followed by the cinematic offerings on August 27, 2019.
 
+   ![Release Date Distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/6337a6d3-c0d3-4b87-b199-baf314d48d89)
 
-7. ![Audience vs sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/950c0494-e874-4a78-b450-25d52e59b5de)
+**7. Audience Score and Sentiment Correlation:**
+   - A captivating connection between audience scores and movie sentiment comes into view. Movies with audience scores exceeding 60 often carry a positive sentiment, uncovering an interesting trend.
 
-8. ![runtime vs sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/c0813436-a3cc-4638-9ef7-46acb6fb27bd)
+   ![Audience Score vs. Sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/950c0494-e874-4a78-b450-25d52e59b5de)
 
+**8. Runtime's Impact on Sentiment:**
+   - A compelling correlation between the duration of movies and their sentiment surfaces, hinting at the influence of runtime on audience feelings.
 
+   ![Runtime vs. Sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/c0813436-a3cc-4638-9ef7-46acb6fb27bd)
 
-9.![correlation  matrix](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/5306d9a6-203e-4c6b-9d34-304a9b8c5595)
+**9. Comprehensive Correlation Matrix:**
+   - Our meticulously constructed correlation matrix validates our initial observations, reaffirming the links between audience score, runtime minutes, and movie sentiment.
+
+   ![Correlation Matrix](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/5306d9a6-203e-4c6b-9d34-304a9b8c5595)
+
+These captivating insights provide the groundwork for our movie review sentiment prediction project. They not only offer valuable context but also fuel our project with meaningful features and trends, promising an engaging journey ahead.
 
 
 
