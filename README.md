@@ -1,6 +1,6 @@
 # Movie Review Sentiment Prediction
 
-[mih10uhu1464fx1kr0by-1](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/75ce6d67-4657-48ba-86b7-e59b6bacade8)
+![mih10uhu1464fx1kr0by-1](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/75ce6d67-4657-48ba-86b7-e59b6bacade8)
 
 This project aims to predict the sentiment of movie reviews using machine learning models. The dataset consists of movie-title, description, genres, duration, director, actors, users' ratings, review text, reviewer name, and more. We use various machine learning models to analyze and predict the sentiment of movie reviews.
 
