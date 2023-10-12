@@ -26,7 +26,9 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 
 4. **Text Pre-processing:** The `reviewText` column is pre-processed to enhance text quality by removing stopwords, URLs, HTML tags, numbers, or apostrophes using regular expressions (regex). This ensures a better quality of text data for analysis and faster convergence during modeling.
 
-5. **Missing Data Imputation:** Missing values in columns with less than 30% missing data are imputed using appropriate strategies.
+5. **Missing Data Imputation:** Missing values in columns with less than 30% missing data are imputed using appropriate strategies like 'most frequent' ,'median', 'mean'.
+
+6. **Encoding Data**: Data was encoded using **LabelEncoder**
 
 ## Feature Engineering Steps
 
@@ -35,7 +37,9 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 2. **Text Vectorization:** The text data is vectorized using TF-IDF Vectorizer, transforming the review text into numerical features that can be used for machine learning models.
 
 
-## 
+## Key Insights:
+
+
 
 
 
