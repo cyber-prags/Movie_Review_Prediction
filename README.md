@@ -110,20 +110,50 @@ y = merged_train_data['sentiment']
 
 ## Evaluation metrics:
 
-Since the data is slightly imbalanced; accuracy wouldn't be a good metric to base our evaluation on; so instead we choose the F1-micro score as the evaluation metric to evaluate how well a model performs.
+In our model evaluation, we recognize the slight class imbalance in our dataset. To ensure a comprehensive assessment, we have selected the following evaluation metrics:
 
-We will also use a combination of PR curves to judge the best performing models.
+`F1-Micro Score`: This metric offers a balanced evaluation of precision and recall and is particularly effective for datasets with class imbalances.
 
-## Model Selection:
+In addition to the F1-Micro Score, we will employ `Precision-Recall (PR)` curves to assess and compare the performance of our models.
 
-We have opted to test out the following models for our dataset:
+## Model Selection
 
-1. **LogitsticRegression
-2. NaiveBayes
-3. Stochastic Gradient Descent Regressor (SGD)
-4. SVC
-5. Light Gradient Boosting Model
-6. XGBoost**
+To harness the full potential of our dataset and effectively predict movie sentiment, we have carefully selected a diverse range of machine learning models. Our model selection includes the following six powerful candidates:
+
+1. **Logistic Regression**: A fundamental yet robust linear model, widely used in classification tasks.
+2. **Naive Bayes**: Leveraging probabilistic approaches, Naive Bayes is known for its simplicity and effectiveness in text classification.
+3. **Stochastic Gradient Descent Regressor (SGD)**: A versatile optimization technique that adapts well to various machine learning tasks.
+4. **Support Vector Classifier (SVC)**: Harnessing the power of support vector machines, SVC is a popular choice for binary and multiclass classification.
+5. **Light Gradient Boosting Model**: A highly efficient gradient boosting framework that excels in handling complex datasets.
+6. **XGBoost**: A leading gradient boosting algorithm renowned for its performance and scalability in both classification and regression tasks.
+
+Each of these models brings its unique strengths to the table, and we will rigorously evaluate and compare their performance to determine the most effective approach for sentiment prediction.
+
+Stay tuned as we delve into the world of machine learning to discover which model outshines the rest in our quest to predict movie sentiment with precision and accuracy.
+
+## Comparitive Analysis of models:
+
+1. **PR-curves: **
+   - **For Training Set:**
+     In the cumulative PR-curves below we can see how the various models perform on the test dataset. In a PR curve; a model with a higher Area Under Curve(AUC) is generally deemed to perform better. In the graph below we see that :
+     > SVC performs the best with an AUC of 0.98.
+     > It is followed by logit(LogisticRegression) and NaiveBayes with 0.95.
+     >![PR-train](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/d41b7777-21c5-44f9-b3e8-797e1d1b69bb)
+
+- **For Test Set:**
+     We can see similar observations in the Test set as follows: 
+     > LogisticRegression,SVC and NaiveBayes performs the best with an AUC of 0.92.
+     > It is followed by SGD with 0.91.
+     >![PR-test](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/cebf8adb-313c-494f-a26a-a306dfa1c8fd)
+     
+
+This suggests that for the PR curves; LogisticRegression, SVC and NaiveBayes perform quite well on the dataset.
+
+2. **F1-micro scores:**
+   In the comparitive analysis of the F1-scores; we see that: 
+   ![F1-comparision](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/81d142e2-9fa8-4a5e-9c32-b0c832999deb)
+26a-a306dfa1c8fd)
+
 
 
 
