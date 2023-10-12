@@ -26,9 +26,9 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 
 4. **Text Pre-processing:** The `reviewText` column is pre-processed to enhance text quality by removing stopwords, URLs, HTML tags, numbers, or apostrophes using regular expressions (regex). This ensures a better quality of text data for analysis and faster convergence during modeling.
 
-5. **Missing Data Imputation:** Missing values in columns with less than 30% missing data are imputed using appropriate strategies like 'most frequent' ,'median', 'mean'.
+5. **Missing Data Imputation:** Missing values in columns with less than 30% missing data are imputed using appropriate strategies like `most frequent` ,`median`, `mean`.
 
-6. **Encoding Data**: Data was encoded using **LabelEncoder**
+6. **Encoding Data:** Data was encoded using **LabelEncoder**.
 
 ## Feature Engineering Steps
 
@@ -38,6 +38,37 @@ The dataset is comprised of three CSV files: `movies`, `train`, and `test`. Thes
 
 
 ## Key Insights:
+
+1. ![reviewer name](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/120cb58c-3eef-4b50-b986-2ea96e0d8031)
+
+2. ![audience score before](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/8719c644-c224-46d1-8db2-3d1ba9e855d3)
+
+
+3. ![runtime](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/031831f7-50a5-498b-9245-c044c1a42dc4)
+
+
+
+4. ![original lang](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/9d58dbd5-0b20-470f-bafd-54fcee2282cb)
+
+
+
+5.![genre distribution](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/58ff9ff1-c479-4c46-bb98-3edfc0322c6b)
+
+
+6. ![release date streams](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/6337a6d3-c0d3-4b87-b199-baf314d48d89)
+
+
+7. ![Audience vs sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/950c0494-e874-4a78-b450-25d52e59b5de)
+
+8. ![runtime vs sentiment](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/c0813436-a3cc-4638-9ef7-46acb6fb27bd)
+
+
+
+9.![correlation  matrix](https://github.com/cyber-prags/Movie_Review_Prediction/assets/74003758/5306d9a6-203e-4c6b-9d34-304a9b8c5595)
+
+
+
+
 
 
 
