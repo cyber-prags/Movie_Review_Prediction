@@ -260,8 +260,6 @@ Thank you for being with me in this journey through data-driven decision-making 
 
 - `/data`: Contains the dataset files (`movies.csv`, `train.csv`, and `test.csv`).
 - `/notebooks`: Jupyter notebooks for data analysis, preprocessing, and model building.
-- `/scripts`: Custom scripts for data cleaning and preprocessing.
-- `/models`: Saved machine learning models.
 - `/images`: Image files used in the project description.
 - `README.md`: This project's main README file, which contains an overview of the project, data, preprocessing, and feature engineering steps.
 
